@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <Navbar />
 
       <Banner
@@ -61,7 +61,7 @@ function App() {
 
       <Footer />
       <ToastContainer />
-    </>
+    </div>
   );
 }
 
