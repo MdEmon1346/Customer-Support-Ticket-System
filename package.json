@@ -11,6 +11,8 @@
     "deploy:surge": "npm run build && cp dist/index.html dist/200.html && surge dist https://myCustSupport010.surge.sh"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "daisyui": "^5.5.19",
     "lucide-react": "^0.577.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
