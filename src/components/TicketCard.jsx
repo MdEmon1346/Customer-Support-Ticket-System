@@ -1,4 +1,4 @@
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const TicketCard = ({ ticket, handleAddToTask }) => {
   const getPriorityColor = (priority) => {
@@ -30,7 +30,7 @@ const TicketCard = ({ ticket, handleAddToTask }) => {
       className="bg-white-500 p-6 rounded-xl shadow-md cursor-pointer hover:shadow-md transition"
       onClick={() => {
         handleAddToTask(ticket);
-        toast.success("Ticket added!");
+        // toast.success("Ticket added!");
       }}
     >
       {/* Top Section */}
