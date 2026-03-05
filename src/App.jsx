@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 import { useState } from "react";
 import ticketsData from "./data/tickets";
@@ -38,25 +38,23 @@ function App() {
   return (
     <div>
       <Navbar />
+      <div className="mx-auto md:mx-9">
+        <Banner
+          inProgressCount={inProgress.length}
+          resolvedCount={resolved.length}
+        />
 
-      <Banner
-        inProgressCount={inProgress.length}
-        resolvedCount={resolved.length}
-      />
+        <div className="container mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+          <div className="md:col-span-2">
+            <TicketList tickets={tickets} handleAddToTask={handleAddToTask} />
+          </div>
 
-      <div className="container mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
-        <div className="md:col-span-2">
-          <TicketList
-            tickets={tickets}
-            handleAddToTask={handleAddToTask}
+          <TaskStatus
+            inProgress={inProgress}
+            resolved={resolved}
+            handleComplete={handleComplete}
           />
         </div>
-
-        <TaskStatus
-          inProgress={inProgress}
-          resolved={resolved}
-          handleComplete={handleComplete}
-        />
       </div>
 
       <Footer />

@@ -26,14 +26,14 @@ const Navbar = () => {
             ),
           )}
 
-          <button className="bg-purple-500 hover:bg-purple-600 transition text-white px-5 py-2 rounded-md text-sm">
+          <button className="bg-linear-to-r from-violet-600 to-purple-600 transition text-white px-5 py-2 rounded-md text-sm">
             + New Ticket
           </button>
         </div>
 
         {/* Mobile Button */}
         <button
-          className="md:hidden transition"
+          className="md:hidden text-black transition"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
@@ -42,7 +42,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
+        className={`md:hidden text-black overflow-hidden transition-all duration-300 ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
